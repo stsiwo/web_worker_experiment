@@ -1,0 +1,26 @@
+{
+  "name": "web_worker_experiment",
+  "version": "1.0.0",
+  "description": "experiment for web worker",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stsiwo/web_worker_experiment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stsiwo/web_worker_experiment/issues"
+  },
+  "homepage": "https://github.com/stsiwo/web_worker_experiment#readme"
+}
