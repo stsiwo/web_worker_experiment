@@ -5,7 +5,10 @@ const webpack = require('webpack'); // to access built-in plugins
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js", 
+   entry: {
+    app: './src/index.js',
+    worker1: './src/worker1.js'
+  },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: __dirname,

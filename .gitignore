@@ -1,4 +1,7 @@
 # dependency
 node_modules/
 
+# output directory of webpack
+dist/
+
 
