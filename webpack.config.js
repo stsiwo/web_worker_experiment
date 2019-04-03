@@ -6,8 +6,8 @@ const webpack = require('webpack'); // to access built-in plugins
 module.exports = {
   mode: "development",
    entry: {
-    app: './src/index.js',
-    worker1: './src/worker1.js'
+    app: './src/index.ts',
+    worker1: './src/worker1.ts'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -39,7 +39,7 @@ module.exports = {
       path.resolve(__dirname, "app")
     ],
     // directories where to look for modules
-    extensions: [".js", ".json", ".jsx", ".css"],
+    extensions: [".js", ".json", ".jsx", ".css", "ts", "tsx"],
   },
   module: {
     rules: [
@@ -51,6 +51,12 @@ module.exports = {
           loader: 'babel-loader',
         }
       },
+      { test: /\.tsx?$/,
+        loader: "awesome-typescript-loader",
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components)/
+      },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
     ]
   }
 
