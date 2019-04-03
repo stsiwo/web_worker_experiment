@@ -40,5 +40,18 @@ module.exports = {
     ],
     // directories where to look for modules
     extensions: [".js", ".json", ".jsx", ".css"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        include: path.resolve(__dirname, 'src'),
+        use: {
+          loader: 'babel-loader',
+        }
+      },
+    ]
   }
+
 }
