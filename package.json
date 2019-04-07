@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "experiment for web worker",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/three": "^0.93.30",
+    "three": "^0.103.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
@@ -20,6 +23,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config webpack.config.js",
+    "start:anime": "webpack-dev-server --open --config webpack.anime.config.js", 
     "build:dev": "webpack --config webpack.config.js"
   },
   "repository": {
